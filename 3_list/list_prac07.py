@@ -26,14 +26,28 @@ def result2(answer, guess):
     A=0
     B=0
     for idx_ans, val_ans in enumerate(answer):
-        if answer[idx_ans]==guess[idx_ans]:#若值香等
+        if answer[idx_ans]==guess[idx_ans]:#同位置的值相等
                 A+=1
-        else:#若位置不等
+        else:
             for idx_gue, val_gue in enumerate(guess):
-                if val_ans == val_gue and idx_ans != idx_gue:
+                if val_ans == val_gue and idx_ans != idx_gue:#不同位置的值相等
                     B+=1
     return str(A)+"A"+str(B)+"B"
 
 print(result2('1234','4321'))
 print(result2('4657','9658'))
 print(result2('9876','6879'))
+
+def result3(answer, guess):
+    A=0
+    B=0
+    for idx_ans, val_ans in enumerate(answer):
+        if answer[idx_ans]==guess[idx_ans]:#同位置的值相等
+            A+=1
+        elif val_ans in guess:
+            B+=1
+    return str(A)+"A"+str(B)+"B"
+
+print(result3('1234','4321'))
+print(result3('4657','9658'))
+print(result3('9876','6879'))
