@@ -8,6 +8,7 @@ def readInput():
     print(num1 + 1)
     print(num2 + 1)
     print(num3 + 1)
+    
 
 def readInput2():
     line = input()
